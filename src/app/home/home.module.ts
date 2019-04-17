@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 import { HomeComponent } from '../home/component/home/home.component';
 
@@ -8,7 +9,9 @@ import { HomeComponent } from '../home/component/home/home.component';
         HomeComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        CarouselModule,
+        WavesModule
     ],
     exports: [],
     providers: []

@@ -10,7 +10,7 @@ const routes: Routes = [
   declarations: [
   ],
   imports: [
-    RouterModule.forRoot(routes, { enableTracing: true }),
+    RouterModule.forRoot(routes, { enableTracing: true })
   ],
   exports: [
     RouterModule
