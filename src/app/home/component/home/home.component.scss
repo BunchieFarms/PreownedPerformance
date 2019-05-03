@@ -1,6 +1,7 @@
 #mainCarousel {
     width: 70%;
     margin: 0px auto;
+    position: relative;
 }
 
 .carousel-caption h3, .carousel-caption p {
@@ -11,21 +12,31 @@ h3 {
     text-align: center;
 }
 
-.seachBar {
-    margin-top: 10px;
+.searchArea {
+    background-color: rgb(255, 101, 1);
+    padding: 10px;
+    margin-top: -10px;
+    border-radius: .25rem;
 }
 
-.searchBar input[type=text] {
+.searchBar {
+    margin-top: 10px;
     width: 70%;
-    display: block;
     margin: 0px auto;
-    margin-top: 10px;
-    text-align: center;
+
+    input[type=text] {
+        width: 70%;
+        display: block;
+        margin: 0px auto;
+        margin-top: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
 }
 
-::placeholder {    
+::placeholder { /* Firefox */
     font-style: italic;
-    opacity: .5; /* Firefox */
+    opacity: .5;
 }
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -41,10 +52,12 @@ h3 {
 .buttons {
     display: flex;
     justify-content: center;
-    
+
+    button {
+        margin: 10px;
+    }
 }
 
-.buttons button {
-    margin: 10px;
-    pointer-events: none;
+#categoryButtons button {
+    border-radius: .25rem .25rem 0 0;
 }

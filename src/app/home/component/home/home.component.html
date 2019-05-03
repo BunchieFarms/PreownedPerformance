@@ -36,12 +36,20 @@
   </mdb-carousel>
 </div>
 
-<div class="searchBar">
-  <h3>Search for whatever your broke ass desires</h3>
-  <input type="text" placeholder="Wheels, s14 drift knuckles, foxbody shell, ej25 heads">
-</div>
+<h3>Search for whatever your broke ass desires</h3>
 
-<div class="buttons">
-    <button mdbBtn type="button" color="info" mdbWavesEffect>Search Local</button>
-    <button mdbBtn type="button" color="info" mdbWavesEffect>Search Nationwide</button>
+<div class="searchBar">
+  <div class="buttons" id="categoryButtons">
+    <button mdbBtn type="button" color="light" mdbWavesEffect>Parts</button>
+    <button mdbBtn type="button" color="light" mdbWavesEffect>Cars and Trucks</button>
+    <button mdbBtn type="button" color="light" mdbWavesEffect>Motorcycles</button>
   </div>
+
+  <div class="searchArea">
+    <input [(ngModel)]="searchQuery" type="text" placeholder="Wheels, s14 drift knuckles, foxbody shell, ej25 heads">
+    <div class="buttons">
+      <button mdbBtn type="button" color="info" (click)="search('local')" mdbWavesEffect>Search Local Area</button>
+      <button mdbBtn type="button" color="info" (click)="search('national')" mdbWavesEffect>Search Nationwide</button>
+    </div>
+  </div>
+</div>
